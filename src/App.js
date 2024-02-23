@@ -7,10 +7,11 @@ import ErrorPage from './components/ErrorPage';
 import RestaurantMenu from './components/RestaurantMenu';
 import { Provider } from 'react-redux';
 import Cartpage from './components/Cartpage';
-import appStore from './utils/AppStore';
 import Grocery from './components/Grocery';
 import Contact from './components/Contact';
 import About from './components/About';
+import appStore from './utils/appStore';
+appStore
 
 
 const AppLayout =()=>{
