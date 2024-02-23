@@ -2,7 +2,6 @@
   "name": "sai",
   "version": "1.0.0",
   "description": " this is my second project",
-  "main": "App.js",
   "scripts": {
     "start": "parcel index.html",
     "build": "parcel build index.html",
