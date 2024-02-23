@@ -4,7 +4,6 @@
   "description": " this is my second project",
   "main": "App.js",
   "scripts": {
-      "start": "react-scripts start",
       "build": "react-scripts build",
       "test": "react-scripts test",
       "eject": "react-scripts eject"
