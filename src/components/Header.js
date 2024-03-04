@@ -10,7 +10,6 @@ const [btnNameReact,setBtnNameReact]=useState("Log in")
 const onlineStatus = useOnlineStatus()
 
 const cartItems = useSelector((store)=>store.items)
-console.log(cartItems)
  
 
     return(

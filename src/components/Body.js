@@ -26,7 +26,7 @@ const Body=()=>{
 
         const Data = await fetch(SWIGGY_API);
 
-        Raw_Data = await Data.json()
+        const Raw_Data = await Data.json()
         console.log(Raw_Data)
 
         //console.log(json.data.cards[1].card.card.gridElements.infoWithStyle.restaurants);
