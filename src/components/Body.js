@@ -25,7 +25,7 @@ const Body=()=>{
     const fetchData = async () => {
             const Data = await fetch(SWIGGY_API);
             const Raw_Data = await Data.json();
-            console.log(Raw_Data);
+            //console.log(Raw_Data);
     
             // Setting the list of restaurants and filtered list based on specific properties of the retrieved data
             setListOfRestaurants(Raw_Data?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants || Raw_Data?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants );
@@ -43,7 +43,7 @@ const Body=()=>{
         <div className="m-3">
              <div className="flex items-center">
                 <div className=" m-3">
-                    <input  class="py-2 px-4 border-solid  border-gray-300 " placeholder="Search..." type="text" value={searchText} onChange={(e)=>setSearchText(e.target.value)}/>
+                    <input  className="py-2 px-4 border-solid  border-gray-300 " placeholder="Search..." type="text" value={searchText} onChange={(e)=>setSearchText(e.target.value)}/>
 
                     <button className="m-3 bg-slate-300 text-black py-2 px-4 rounded-r-md" onClick={()=>{
                         filteredData1=listofRestaurants.filter((each)=>each.info.name.toLowerCase().includes(searchText.toLocaleLowerCase()))
