@@ -26,12 +26,13 @@ const Body=()=>{
 
         const Data = await fetch(SWIGGY_API);
 
-        json = await Data.json()
+        Raw_Data = await Data.json()
+        console.log(Raw_Data)
 
         //console.log(json.data.cards[1].card.card.gridElements.infoWithStyle.restaurants);
 
-        setListOfRestaurants(json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants)
-        setFilteredList(json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants)
+        setListOfRestaurants(Raw_Data?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants)
+        setFilteredList(Raw_Data?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants)
     }
     
     const onlineStatus = useOnlineStatus();
