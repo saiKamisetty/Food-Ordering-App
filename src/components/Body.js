@@ -22,17 +22,21 @@ const Body=()=>{
     },[]);
  
 
-    const fetchData = async()=>{
-
-        const Data = await fetch(SWIGGY_API);
-
-        const Raw_Data = await Data.json()
-        console.log(Raw_Data)
-
-        //console.log(json.data.cards[1].card.card.gridElements.infoWithStyle.restaurants);
-
-        setListOfRestaurants(Raw_Data?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants)
-        setFilteredList(Raw_Data?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants)
+    const fetchData = async () => {
+        try {
+            const Data = await fetch(SWIGGY_API);
+            if (!Data.ok) {
+                throw new Error('Failed to fetch data');
+            }
+            const Raw_Data = await Data.json();
+            console.log(Raw_Data);
+    
+            // Setting the list of restaurants and filtered list based on specific properties of the retrieved data
+            setListOfRestaurants(Raw_Data?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
+            setFilteredList(Raw_Data?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
+        } catch (error) {
+            console.error('Error fetching data:', error);
+        }
     }
     
     const onlineStatus = useOnlineStatus();
