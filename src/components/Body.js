@@ -32,8 +32,8 @@ const Body=()=>{
             console.log(Raw_Data);
     
             // Setting the list of restaurants and filtered list based on specific properties of the retrieved data
-            setListOfRestaurants(Raw_Data?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
-            setFilteredList(Raw_Data?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
+            setListOfRestaurants(Raw_Data?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants||Raw_Data?.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
+            setFilteredList(Raw_Data?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants ||Raw_Data?.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
         } catch (error) {
             console.error('Error fetching data:', error);
         }

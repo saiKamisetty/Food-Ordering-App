@@ -13,7 +13,7 @@ const cartItems = useSelector((store)=>store.items)
  
 
     return(
-        <div className='flex justify-between bg-slate-200 m-3 shadow-lg rounded-lg'>
+        <div className='flex justify-between bg-slate-200 m-3 shadow-lg rounded-lg '>
             <div className=''>
                 <Link to="/"><img className="w-20 m-3"src={ LOGO_LINK} /></Link>
             </div>
