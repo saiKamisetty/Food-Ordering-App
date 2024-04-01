@@ -11,7 +11,7 @@ import { SWIGGY_API } from "../utils/constant";
 
 
 const Body=()=>{
-    const [listofRestaurants,setListOfRestaurants]=useState([]);
+    const [listofRestaurants,setListOfRestaurants]=useState([0]);
     const [searchText ,setSearchText]=useState("");
     const [filteredList,setFilteredList]=useState([]);
 
