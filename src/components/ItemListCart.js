@@ -9,8 +9,8 @@ const ItemListCart=({items})=>{
     const handleAddItem=(item)=>{
         dispatch(addItem(item))
     }
-    const handleRemoveItem=(item)=>{
-        dispatch(removeItem(item))
+    const handleRemoveItem=(id)=>{
+        dispatch(removeItem(id))
     }
 
 
@@ -27,7 +27,8 @@ const ItemListCart=({items})=>{
                         <img className="w-9/12 h-lg "src={IMG_LINK + item.card.info.imageId}/>
                         <div className="">
                             <button className="bg-slate-300 hover:bg-slate-700 text-white font-bold py-auto px-0 mx-2 my-5 rounded"onClick={()=>handleAddItem(item)} >➕ </button>
-                            <button className="bg-slate-300 hover:bg-slate-700 text-white font-bold py-auto px-0 mx-2 my-5 rounded" onClick={()=>handleRemoveItem(item)} >➖ </button>
+                            <div className="text-green-700"><p>Qty:{item.total}</p></div>
+                            <button className="bg-slate-300 hover:bg-slate-700 text-white font-bold py-auto px-0 mx-2 my-5 rounded" onClick={()=>handleRemoveItem(item.card.info.id)} >➖ </button>
                         </div>
                     </div>
                 </div>

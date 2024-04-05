@@ -7,11 +7,9 @@ import useOnlineStatus from "../utils/useOnlineStatus";
 import { SWIGGY_API } from "../utils/constant";
 
 
- 
-
 
 const Body=()=>{
-    const [listofRestaurants,setListOfRestaurants]=useState([0]);
+    const [listofRestaurants,setListOfRestaurants]=useState([]);
     const [searchText ,setSearchText]=useState("");
     const [filteredList,setFilteredList]=useState([]);
 
