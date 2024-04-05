@@ -40,10 +40,7 @@ const Cartpage=()=>{
 
         },[cartItems])
 
-       // if (filterData.length===0) return <Shimmer/>
-
-
-
+       //  need to add cardempty componenet  -> if (filterData.length===0) return <Shimmer/>
 
         
     return (
