@@ -5,6 +5,7 @@ import Shimmer from "./Shimmer";
 import {Link} from "react-router-dom";
 import useOnlineStatus from "../utils/useOnlineStatus";
 import { SWIGGY_API } from "../utils/constant";
+import { TESTING } from "../utils/constant";
 
 
 
@@ -21,7 +22,7 @@ const Body=()=>{
  
 
     const fetchData = async () => {
-            const Data = await fetch(SWIGGY_API);
+            const Data = await fetch(TESTING);
             const Raw_Data = await Data.json();
             console.log(Raw_Data);
     
